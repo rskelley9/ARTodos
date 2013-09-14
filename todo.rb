@@ -4,10 +4,10 @@ require_relative 'config/application'
 
 user_input = ARGV[0]
 
-# case user_input
+case user_input
 
-  # when 'list'
-  #   TaskController.list
-  #   puts "listing all taks"
-  # when 'add'
-  #   TaskController.
+  when 'list'
+    TaskController.list
+    puts "listing all tasks"
+  when 'add'
+    TaskController.
