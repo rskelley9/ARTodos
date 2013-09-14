@@ -12,7 +12,7 @@ class TodoController
     Todo.delete
   end
 
-  def def.list
+  def self.list
     Todo.list
   end
 end

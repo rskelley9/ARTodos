@@ -1,7 +1,7 @@
-class ToDo < ActiveRecord::Base
+class Todo < ActiveRecord::Base
 
-
-  validate :task, presence: true
+  
+  has_many :tasks
 
   def self.delete(number)
     all(:number).destroy
@@ -15,6 +15,5 @@ class ToDo < ActiveRecord::Base
     create(task: stuff)
   end
 
-  has_many :Tasks
 
 end

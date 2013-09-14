@@ -1,6 +1,6 @@
 class Task < ActiveRecord::Base
 
-
+  belongs_to :todo
   validate :task, presence: true
 
    def self.delete(params)
@@ -8,21 +8,29 @@ class Task < ActiveRecord::Base
    end
 
    def self.finished?
-    if :finished == false
+    # if :finished == false
    end
 
-   def self.find(params)
-     find(:params, :from => :id)
-    end
+   def self.order_by(field,direction)
+    order("#{field} #{direction}")
+   end
+
+   def self.find(value)
+     find(:value, :from => :id)
+   end
 
    def self.list
     find(:all)
    end
 
-   def self.add(stuff)
-    create(task: stuff)
+   def self.select_range(limit_by,offset_by)
+    limit(limit_by).offset(offset_by)
    end
 
-   belongs_to :Todo
+
+   def self.add(value)
+    create(task: value)
+   end
+
 
 end

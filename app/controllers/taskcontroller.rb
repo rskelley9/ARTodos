@@ -9,11 +9,15 @@ class TaskController < ActiveRecord::Base
     Task.add(params)
   end
 
+  def list_completed?
+    Task.finished?
+  end
+
   def self.delete()
     Task.delete()
   end
 
   def self.list
-    Task.list
+    Task.list.to_a
   end
 end
