@@ -4,7 +4,10 @@
 
 Before you get started...
 
-1.  **Install Correct Version of SQLite3**
+1a. This is a little bit messed up. But, the meat is there.
+
+
+1b.  **Install Correct Version of SQLite3**
 
     Run the following from the command line:
 
